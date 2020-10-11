@@ -11,7 +11,7 @@
 
             // $name = $_POST['readerID'];
             //To connect the my database
-            $db = mysqli_connect("sql1.njit.edu","qq24","1989123","qq24");
+            $db = mysqli_connect("sql1.njit.edu");
             //To check datbase connect successfuly.
             if (mysqli_connect_errno()) {
            

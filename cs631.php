@@ -4,7 +4,7 @@
 	$user=$_POST['userName'];
 	$pass=$_POST['password'];
 
-	$db=mysqli_connect("sql1.njit.edu","qq24","1989123","qq24");
+	$db=mysqli_connect("sql1.njit.edu");
 	if (mysqli_connect_errno()){
 		echo "Fail to Connect to Mysql: ". mysqli_connect_errno();
 	}
