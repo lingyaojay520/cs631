@@ -9,7 +9,7 @@
 
             $name = $_POST['checkout'];
             //To connect the my database
-            $db = mysqli_connect("sql1.njit.edu");
+            $db = mysqli_connect("sql1.njit.edu");//For userid and password are deleted for safe.
             //To check datbase connect successfuly.
             if (mysqli_connect_errno()) {
            
