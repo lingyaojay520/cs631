@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+
+  .img-auto { 
+  			height: 300px; width: 300px;} .img-auto img { height: auto; width: auto; max-height: 100%; max-width: 100%;
+  	} 
+ 
+	body {
+		  font-family: Arial;
+		  text-align: center;
+		  position:absolute;
+          top: 50%;
+          left: 50%;
+          transform:translate(-50%,-50%);
+
+		}
+
+		*{
+		  box-sizing: border-box;
+		 }
+
+		form.example input[type=text] { 
+		  padding: 10px;
+		  font-size: 17px;
+		  border: 1px solid grey;
+		  float: middle;
+		  width: 80%;
+		  background: #f1f1f1;
+		}
+   
+ 		form.example input[type=password] { 
+		  padding: 10px;
+		  font-size: 17px;
+		  border: 1px solid grey;
+		  float: middle;
+		  width: 80%;
+		  background: #f1f1f1;
+		}
+
+		form.example button {
+		  float: middle;
+		  width: 25%;
+		  padding: 10px;
+		  background: #2196F3;
+		  color: white;
+		  font-size: 17px;
+		  border: 1px solid grey;
+		  border-left: none;
+		  cursor: pointer;
+		}
+
+		form.example button:hover {
+		  background: #0b7dda;
+		}
+
+		form.example::after {
+		  content: "";
+		  clear: both;
+		  display: table;
+		}
+
+		form.example input{
+			margin-bottom: 30px;
+		}
+		
+</style>
+</head>
+
+<body>
+
+<div class ="img-auto1">
+<img src="https://web.njit.edu/~yl854/cs631/Pic/library2.jpg" alt="city library" >
+</div>
+
+<h1>Welcome to City Library</h1>
+
+<form class ="example" style="margin:auto;max-width:450px" action="cs631.php" method="POST" >
+
+
+    <input type="text" id="myInput" name="userName" size="20" maxlength="15" placeholder="Username" onfocus = "this.value=''" required>
+ 
+    <input type="password" name="password" size="20" maxlength="15" placeholder="Password" onfocus = "this.value=''" required>
+
+    <button type ="submit" name = "submit" value = "submit">Login</button>
+
+</form>
+
+</body>
+</html>
+

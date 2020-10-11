@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<!--==========================================
+              Style and css
+===========================================-->
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reader</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+
+  	.img-auto { 
+  			height: 300px; width: 300px;} .img-auto img { height: auto; width: auto; max-height: 100%; max-width: 100%;
+  	} 
+ 
+	body {
+		  font-family: Arial;
+		  
+	}
+
+		*{
+		  box-sizing: border-box;
+	}
+
+	form.example input[type=text] { 
+		  padding: 10px;
+		  font-size: 17px;
+		  border: 1px solid grey;
+		  float: left;
+		  width: 80%;
+		  background: #f1f1f1;
+	}
+
+	form.example button {
+		  float: left;
+		  width: 20%;
+		  padding: 10px;
+		  background: #2196F3;
+		  color: white;
+		  font-size: 17px;
+		  border: 1px solid grey;
+		  border-left: none;
+		  cursor: pointer;
+	}
+
+	form.example button:hover {
+	  	background: #0b7dda;
+	}
+
+	form.example::after {
+		  content: "";
+		  clear: both;
+		  display: table;
+	}
+	.w3-button {
+		width:90px;
+	}
+
+	form.example2 button{
+
+		  float: middle;
+		  width: 450px;
+		  padding: 10px;
+		  background: #2196F3;
+		  color: white;
+		  font-size: 17px;
+		  border: 1px solid grey;
+		  border-left: none;
+		  cursor: pointer;
+
+	}
+
+	form.example2 button:hover {
+	  	background: #0b7dda;
+	}
+
+	form.example b{
+		font-size: 16px;
+	}
+
+	h1{
+		margin-bottom: 30px;
+	}
+
+	img{
+		margin-bottom: 15px;
+	}
+		
+</style>
+</head>
+
+<body>
+<div align="center">
+<div class ="img-auto1">
+<img src="Pic/library2.jpg" alt="city library" >
+</div>
+
+
+<h1>Welcome to City Library</h1>
+
+<!--==========================================
+              Document Search
+===========================================-->
+
+<form class ="example" style="margin:auto;max-width:450px" action ="search.php?go" method = "POST" >
+
+    <div class="docSearch" align="left">
+      <b>Document Search:</b><input type ="text"  id = "myInput" name = "dName" placeholder="Search by ID, Title, or Publisher name" onfocus = "this.value=''" required>
+
+      <button type ="submit" name = "submit" value = "Search"><i class="fa fa-search"></i></button>
+ 	</div>
+
+</form>
+
+<br><br>
+<!--==========================================
+              Document Checkout
+===========================================-->
+<form class = "example" style="margin:auto;max-width:450px" action="checkout.php?go" method="POST">
+	<div class="docReturn" align = "left">
+
+		<b>Document Checkout:</b><input type ="text" name = "checkout" placeholder="Enter A Document ID" onfocus = "this.value=''" required>
+		
+		<button type ="submit" name = "submit" value = "Submit">Checkout</button>
+	</div>
+</form>
+<br><br>
+
+<!--==========================================
+              Document Return
+===========================================-->
+<form class = "example" style="margin:auto;max-width:450px" action="return.php?go" method="POST">
+	<div class="docReturn" align = "left">
+
+		<b>Document Return:</b><input type ="text" name = "return" placeholder="Enter A Document ID" onfocus = "this.value=''" required>
+		
+		<button type ="submit" name = "submit" value = "Submit">Return</button>
+	</div>
+</form>
+<br><br>
+
+
+<!--==========================================
+              Document Reserve
+===========================================-->
+<form class = "example" style="margin:auto;max-width:450px" action="reserve.php?go" method="POST">
+	<div class="docReturn" align = "left">
+
+		<b>Document Reserve:</b><input type ="text" name = "reserve" placeholder="Enter A Document ID" onfocus = "this.value=''" required>
+		
+		<button type ="submit" name = "submit" value = "Submit">Reserve</button>
+	</div>
+</form>
+
+<br><br>
+
+
+
+
+
+<!--==========================================
+              Printing Documents
+===========================================-->
+<form class = "example" style="margin:auto;max-width:450px" action="print_documents.php?go" method="POST">
+	<div class="docReturn" align = "left">
+
+		<b>Printing Documents:</b><input type ="text" name = "publisher" placeholder="Enter Publisher Name or Publisher ID" onfocus = "this.value=''" required>
+		
+		<button type ="submit" name = "submit" value = "Submit">Print</button>
+	</div>
+</form>
+
+<br><br>
+
+<!--==========================================
+              Printing Reserves
+===========================================-->
+<form class = "example2" style="margin:auto;max-width:450px" action="print_reserve.php?go" method="POST">
+	<div class="docReturn" align = "left">
+
+		<!-- <b>6.Printing Reserves:</b><input type ="text" name = "readerID" placeholder="Enter Your Reader ID Number" onfocus = "this.value=''" required> -->
+		
+		<button type ="submit" name = "submit" value = "Submit">Printing Reserves</button>
+	</div>
+</form>
+
+<br><br>
+
+<!--==========================================
+              Checking Fines
+===========================================-->
+<form class = "example2" style="margin:auto;max-width:450px" action="check_fine.php?go" method="POST">
+	<div class="docReturn" align = "left">
+
+		<!-- <b>5.Checking Fines:</b><input type ="text" name = "readerID" placeholder="Enter Your Reader ID Number" onfocus = "this.value=''" required> -->
+		
+		<button type ="submit" name = "submit" value = "Submit">Checking Fines</button>
+	</div>
+</form>
+
+<br><br>
+
+<!--==========================================
+             Quit(back to login page)
+===========================================-->
+<form action = "https://web.njit.edu/~yl854/cs631/cs631.html">
+    <div class = "quit">
+    	<button type = "submit" class="w3-button w3-blue">Quit</button>
+    </div>
+</form>
+<hr>
+<p>&copy; 2019 Spring by Yao Ling, Tianzhi Cao, and Qiong Qin</p>
+</div>
+	
+</body>
+</html>
